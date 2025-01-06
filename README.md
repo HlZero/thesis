@@ -15,10 +15,10 @@ We integrate the transfer learning model that demonstrated the best performance 
 
 ## Proposed Methodologies & Evaluation
 ### Comparison of the original VGG16 and proposed VGG16-based transfer learning model (model I):
-<img width="494" alt="截屏2025-01-06 下午4 50 11" src="https://github.com/user-attachments/assets/e8f92b48-c5f5-46de-a18b-7ce457985e3b" />
+<img width="459" alt="截屏2025-01-06 下午5 31 01" src="https://github.com/user-attachments/assets/7995beb6-2f05-4f13-8a2f-fb5f92879edd" />
 
 ### Comparison of the original MobileNetV3-Large and proposed MobileNetV3-Large based transfer learning model (model II):
-<img width="614" alt="截屏2025-01-06 下午4 52 11" src="https://github.com/user-attachments/assets/5512bf3b-291d-4d3c-8767-fac79a7691e6" />
+<img width="452" alt="截屏2025-01-06 下午5 31 23" src="https://github.com/user-attachments/assets/2ad0b01a-7167-4d14-a875-e8a2e68b8bb7" />
 
 ### Hyperparameters used for the proposed model I and II: 
 <img width="418" alt="截屏2025-01-06 下午5 01 39" src="https://github.com/user-attachments/assets/6ec7ecd2-7f45-42ae-b685-7389635d1958" />
