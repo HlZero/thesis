@@ -3,6 +3,7 @@
 This paper presents a lightweight deep transfer learning based human activity detection and diagnostic recognition approach using WiFi sensing. In our method, the amplitude matrix of each WiFi Channel State Information (CSI) stream is reorganized as an image. Therefore, WiFi based human activity recognition is transformed into an image classification task. Leveraging the high potential of Convolutional Neural Networks in image processing, a CNN-based transfer learning model is employed to reduce the need for extensive network training and to extract features more suited to the CSI matrix. The proposed methods are trained and tested on a public CSI dataset, demonstrating an accuracy of approximately 94% to 99% across six activities. This performance outperforms the state-of-the-art in Human Activity Recognition for Customer Premises Equipment (CEP).
 
 We integrate the transfer learning model that demonstrated the best performance into CPE and deploy it on a Raspberry Pi 4 for local detection applications. The User Services Platform (USP) serves as the standard for remote manipulation of connected CPE. Utilizing the USP protocol, end-users can independently manage and monitor their CPE through one or more Controllers.
+
 ## General Pipeline
 ### Overall framework of transfer learning model building:
 <img width="300" alt="截屏2025-01-06 下午5 23 38" src="https://github.com/user-attachments/assets/20eb5f02-1ab2-44d5-9ee3-b34b1c42c490" />
@@ -28,6 +29,8 @@ We integrate the transfer learning model that demonstrated the best performance 
 
 ### Model Evaluation (Accuracy and Loss are refer to validation accuracy and validation loss. Bach size are the same, result in same amount of data in one epoch):
 <img width="668" alt="截屏2025-01-06 下午5 03 38" src="https://github.com/user-attachments/assets/f93310b9-557e-4d42-83c8-e227f26f6430" />
+
+The MobileNetV3-Large model with and without fine-tuning take almost same training time, which is 60% less than the time that VGG16-based model uses for training. This huge difference also appears when comparing the model size. This due to the structure and the number of parameters of pre-trained models. VGG16 model has 14.8 million parameters, while MobileNetV3-Large model contains 3.1 million parameters and is constructed in a more efficient way. Drawing from the evaluation results, choosing our MobileNetV3-Large based model with fine-tuning (model III), achieves higher accuracy with time-efficiency and relative smaller model size, making it well-suited for deployment in Customer Premises Equipment and IoT devices for localized HAR tasks.
 
 ## Deployment of Machine Learning Models in Local Environments
 ### USP framework:
